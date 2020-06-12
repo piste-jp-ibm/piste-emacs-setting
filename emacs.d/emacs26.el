@@ -21,6 +21,7 @@
 (setq load-path (cons "~/github/company-mode" load-path))
 (setq load-path (cons "~/github/rainbow-delimiters" load-path))
 (setq load-path (cons "~/github/markdown-mode" load-path))
+(setq load-path (cons "~/github/sct-mode" load-path))
 ;; syslog-mode requires a lot of libraries....
 ;(setq load-path (cons "~/github/syslog-mode" load-path))
 ;(setq load-path (cons "~/github/hide-lines" load-path))

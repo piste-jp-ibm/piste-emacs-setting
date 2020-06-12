@@ -2,7 +2,7 @@
 ;; Emacs25 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; Time-stamp: <2018-12-17 15:03:32 piste>
+;; Time-stamp: <2020-06-12 16:47:06 piste>
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -22,6 +22,10 @@
 (setq load-path (cons "~/github/company-mode" load-path))
 (setq load-path (cons "~/github/rainbow-delimiters" load-path))
 (setq load-path (cons "~/github/markdown-mode" load-path))
+(setq load-path (cons "~/github/sct-mode" load-path))
+;; syslog-mode requires a lot of libraries....
+;(setq load-path (cons "~/github/syslog-mode" load-path))
+;(setq load-path (cons "~/github/hide-lines" load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color setting definitions

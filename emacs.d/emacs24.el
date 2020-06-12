@@ -14,58 +14,14 @@
 ;  (server-start))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Using color definitions
+;; Additional site-lisp paths
+(setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
+(setq load-path (cons "/usr/local/share/emacs/site-lisp/doxymacs" load-path))
 
-;; For Dark theme
-(setq color_zouge         "#f8f4e6")
-(setq color_binrojizome   "#433d3c")
-(setq color_kurotsurubami "#544a47")
-(setq color_miruiro       "#726d40")
-(setq color_soho          "#ab6953")
-(setq color_genjinezu     "#888084")
-(setq color_nijiiro       "#f6bfbc")
-(setq color_momohanairo   "#e198b4")
-(setq color_awafujiiro    "#bbc8e6")
-(setq color_shojyohi      "#e2041b")
-(setq color_asamurasaki   "#c4b3ef")
-(setq color_kamenozoki    "#a2d7dd")
-(setq color_wakanairo     "#d8e698")
-(setq color_urahayanagi   "#c1d8ac")
-(setq color_kenpoiro      "#543f32")
-(setq color_tyojicha      "#b4866b")
-(setq color_suzuiro       "#9ea1a3")
-(setq color_urumiiro      "#c8c2be")
-(setq color_rikyusirocha  "#b3ada0")
-
-(setq color_sunairo       "#bcd3b2")
-(setq color_natsumushi    "#cee4ae")
-(setq color_yuuou         "#f9c89b")
-(setq color_tankou        "#f8e58c")
-(setq color_sosyoku       "#eae5e3")
-(setq color_kogane        "#e6b422")
-(setq color_koikurenai    "#a22041")
-
-;; For Light theme
-(setq color_torinokoiro   "#fff1cf")
-(setq color_karekusairo   "#ede4cd")
-(setq color_budouiro      "#522f60")
-(setq color_seiran        "#274a78")
-(setq color_aiiro         "#165e83")
-(setq color_chitosemidori "#316745")
-(setq color_mushiao       "#3a5b52")
-(setq color_hiwamoegi     "#82ae46")
-(setq color_oitakeiro     "#769164")
-(setq color_biroudo       "#2f5d50")
-(setq color_tokusairo     "#3b7960")
-(setq color_benikikyou    "#4d4398")
-(setq color_shiraai       "#c1e4e9")
-(setq color_shirahanairo  "#e8ecef")
-(setq color_uguisucha     "#715c1f")
-(setq color_tetsukon      "#17184b")
-(setq color_ebizome       "#7a4171")
-(setq color_moegiiro      "#006e54")
-(setq color_azukiiro      "#96415d")
-(setq color_mirucha       "#5a544b")
+(setq load-path (cons "~/github/powerline" load-path))
+(setq load-path (cons "~/github/company-mode" load-path))
+(setq load-path (cons "~/github/rainbow-delimiters" load-path))
+(setq load-path (cons "~/github/markdown-mode" load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color setting definitions
@@ -79,124 +35,31 @@
   (setq theme "Light")
   )
 
-;; Base color (Light)
-(setq foreground-light color_binrojizome)
-(setq background-light color_torinokoiro)
-
-;; Base color (Dark)
-(setq foreground-dark  color_zouge)
-(setq background-dark  color_binrojizome)
-(setq yank-bg-dark     color_kurotsurubami)
-
-(if (string= theme "Dark")
+(if (string= (getenv "RATINA") "YES")
     (progn
-      (setq color-fg foreground-dark)
-      (setq color-bg background-dark)
-      (set-foreground-color color-fg)
-      (set-background-color color-bg)
-      (set-face-attribute 'region nil :background yank-bg-dark)
-
-      ;; Powerline
-      (setq color-bg-powerline-active0 "DarkOliveGreen1")
-      (setq color-bg-powerline-active1 "SpringGreen4")
-      (setq color-bg-powerline-active2 "LightGoldenrod4")
-      (setq color-bg-powerline-inactive0 "gray30")
-      (setq color-fg-powerline-inactive0 "gray70")
-      (setq color-bg-powerline-inactive1 "gray70")
-      (setq color-bg-powerline-inactive2 "gray70")
-
-      ;; White spaces
-      (setq color-fg-trailing color_zouge)
-      (setq color-bg-trailing color_miruiro)
-      (setq color-bg-tab      color_kurotsurubami)
-      (setq color-bg-db       color_kurotsurubami)
-
-      ;; Programming (Bold)
-      (setq color-fg-warning  color_shojyohi)
-      (setq color-fg-keyword  color_nijiiro)
-      (setq color-fg-builtin  color_momohanairo)
-      (setq color-fg-type     color_awafujiiro)
-      (setq color-fg-constant color_urahayanagi)
-      (setq color-fg-pp       color_asamurasaki)
-
-      ;; Programming (Normal)
-      (setq color-fg-function color_kamenozoki)
-      (setq color-fg-variable color_wakanairo)
-      (setq color-fg-string   color_urumiiro)
-      (setq color-bg-string   color_kenpoiro)
-      (setq color-fg-lablel   color_urahayanagi)
-      (setq color-fg-doc      color_rikyusirocha)
-      (setq color-fg-comment  color_genjinezu)
-
-      ;; Rainbow
-      (setq color-fg-rainbow1  color_kamenozoki)
-      (setq color-fg-rainbow2  color_kamenozoki)
-      (setq color-fg-rainbow3  color_sunairo)
-      (setq color-fg-rainbow4  color_natsumushi)
-      (setq color-fg-rainbow5  color_yuuou)
-      (setq color-fg-rainbow6  color_tankou)
-      (setq color-fg-rainbow7  color_awafujiiro)
-      (setq color-fg-rainbow8  color_sosyoku)
-      (setq color-fg-rainbow9  color_momohanairo)
-      (setq color-fg-unmatched color_zouge)
-      (setq color-bg-unmatched color_koikurenai)
-      (setq color-fg-mismatch  color_binrojizome)
-      (setq color-bg-mismatch  color_kogane)
+      (setq ratina t)
       )
+  (setq ratina nil)
+  )
 
-  ;; Face color setting for Light mode
-  (setq color-fg foreground-light)
-  (setq color-bg background-light)
+(if window-system
+  ;; GUI color setting
+  (if (string= theme "Dark")
+      (progn
+        (load (expand-file-name "~/.emacs.d/color_dark.el") nil t nil)
+        )
+    (load (expand-file-name "~/.emacs.d/color_light.el") nil t nil)
+    )
 
-  (set-foreground-color color-fg)
-  (set-background-color color-bg)
-
-  ;; Powerline
-  (setq color-bg-powerline-active0   "DarkOliveGreen1")
-  (setq color-bg-powerline-active1   "SpringGreen4")
-  (setq color-bg-powerline-active2   "LightGoldenrod4")
-  (setq color-bg-powerline-inactive0 "gray30")
-  (setq color-fg-powerline-inactive0 "gray70")
-  (setq color-bg-powerline-inactive1 "gray70")
-  (setq color-bg-powerline-inactive2 "gray70")
-
-  ;; White spaces
-  (setq color-fg-trailing color_binrojizome)
-  (setq color-bg-trailing color_shirahanairo)
-  (setq color-bg-tab      color_shiraai)
-  (setq color-bg-db       color_kurotsurubami)
-
-  ;; Programming (Bold)
-  (setq color-fg-warning  color_shojyohi)
-  (setq color-fg-keyword  color_budouiro)
-  (setq color-fg-builtin  color_seiran)
-  (setq color-fg-type     color_aiiro)
-  (setq color-fg-constant color_chitosemidori)
-  (setq color-fg-pp       color_mushiao)
-
-  ;; Programming (Normal)
-  (setq color-fg-function color_biroudo)
-  (setq color-fg-variable color_tokusairo)
-  (setq color-fg-string   color_binrojizome)
-  (setq color-bg-string   color_karekusairo)
-  (setq color-fg-lablel   color_benikikyou)
-  (setq color-fg-doc      color_hiwamoegi)
-  (setq color-fg-comment  color_oitakeiro)
-
-  ;; Rainbow
-  (setq color-fg-rainbow1  color_biroudo)
-  (setq color-fg-rainbow2  color_biroudo)
-  (setq color-fg-rainbow3  color_uguisucha)
-  (setq color-fg-rainbow4  color_tetsukon)
-  (setq color-fg-rainbow5  color_koikurenai)
-  (setq color-fg-rainbow6  color_ebizome)
-  (setq color-fg-rainbow7  color_moegiiro)
-  (setq color-fg-rainbow8  color_azukiiro)
-  (setq color-fg-rainbow9  color_mirucha)
-  (setq color-fg-unmatched color_zouge)
-  (setq color-bg-unmatched color_koikurenai)
-  (setq color-fg-mismatch  color_binrojizome)
-  (setq color-bg-mismatch  color_kogane)
+  ;; 256 terminal color setting
+  (progn
+    (if (string= theme "Dark")
+        (progn
+          (load (expand-file-name "~/.emacs.d/color_dark_term256.el") nil t nil)
+          )
+      (load (expand-file-name "~/.emacs.d/color_light_term256.el") nil t nil)
+      )
+    )
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -248,21 +111,23 @@
 (setq ns-use-srgb-colorspace nil)
 
 (set-face-attribute 'powerline-active0 nil
-                    :background "DarkOliveGreen1")
+                    :foreground color-fg-powerline-active0
+                    :background color-bg-powerline-active0)
 (set-face-attribute 'powerline-active1 nil
-                    :background "SpringGreen4")
+                    :foreground color-fg-powerline-active1
+                    :background color-bg-powerline-active1)
 (set-face-attribute 'powerline-active2 nil
-                    :background "LightGoldenrod4")
-
+                    :foreground color-fg-powerline-active2
+                    :background color-bg-powerline-active2)
 (set-face-attribute 'powerline-inactive0 nil
-                    :foreground "gray30"
-                    :background "gray60")
+                    :foreground color-fg-powerline-inactive0
+                    :background color-bg-powerline-inactive0)
 (set-face-attribute 'powerline-inactive1 nil
-                    :foreground "gray70"
-                    :background "gray70")
+                    :foreground color-bg-powerline-inactive1
+                    :background color-bg-powerline-inactive1)
 (set-face-attribute 'powerline-inactive2 nil
-                    :foreground "gray70"
-                    :background "gray70")
+                    :foreground color-bg-powerline-inactive2
+                    :background color-bg-powerline-inactive2)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; linum setting

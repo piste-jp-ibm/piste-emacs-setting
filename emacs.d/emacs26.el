@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/06/12 15:20:02 piste
+;; +DATE: 2020/06/12 15:38:20 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -61,9 +61,6 @@
       (load (expand-file-name "~/.emacs.d/color_light_term256.el") nil t nil)
       )
     )
-
-  ;; Scroll bar setting
-  (set-scroll-bar-mode 'right)  
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -276,6 +273,12 @@
 ;; Window setting
 (setq-default truncate-lines nil)
 (setq-default truncate-partial-width-windows t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Scroll bar setting
+(if window-system
+    (set-scroll-bar-mode 'right)
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Startup setting

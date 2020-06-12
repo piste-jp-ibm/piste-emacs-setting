@@ -6,6 +6,10 @@
 ;;
 
 ;; Color name definitions
+(setq color_zouge         "#f8f4e6")
+(setq color_binrojizome   "#433d3c")
+(setq color_kurotsurubami "#544a47")
+(setq color_shojyohi      "#e2041b")
 (setq color_torinokoiro   "#fff1cf")
 (setq color_karekusairo   "#ede4cd")
 (setq color_budouiro      "#522f60")
@@ -26,6 +30,8 @@
 (setq color_moegiiro      "#006e54")
 (setq color_azukiiro      "#96415d")
 (setq color_mirucha       "#5a544b")
+(setq color_kogane        "#e6b422")
+(setq color_koikurenai    "#a22041")
 
 ;; Face color setting for Light mode
 ;; Base color (Light)
@@ -48,13 +54,19 @@
 (set-background-color color-bg)
 
 ;; Powerline
-(setq color-bg-powerline-active0   "DarkOliveGreen1")
-(setq color-bg-powerline-active1   "SpringGreen4")
-(setq color-bg-powerline-active2   "LightGoldenrod4")
+(setq color-bg-powerline-active0 "DarkOliveGreen1")
+(setq color-fg-powerline-active0 color-fg)
+(setq color-bg-powerline-active1 "SpringGreen4")
+(setq color-fg-powerline-active1 color-fg)
+(setq color-bg-powerline-active2 "LightGoldenrod4")
+(setq color-fg-powerline-active2 color-fg)
 (setq color-bg-powerline-inactive0 "gray30")
 (setq color-fg-powerline-inactive0 "gray70")
 (setq color-bg-powerline-inactive1 "gray70")
 (setq color-bg-powerline-inactive2 "gray70")
+
+;; Which function
+(setq color-fg-which "gray10")
 
 ;; White spaces
 (setq color-fg-trailing color_binrojizome)

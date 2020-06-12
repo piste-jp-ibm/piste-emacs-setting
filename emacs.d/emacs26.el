@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/04/15 09:27:27 piste
+;; +DATE: 2020/06/12 14:04:51 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,6 +16,11 @@
 ;; Additional site-lisp paths
 (setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
 (setq load-path (cons "/usr/local/share/emacs/site-lisp/doxymacs" load-path))
+
+(setq load-path (cons "~/github/powerline" load-path))
+(setq load-path (cons "~/github/company-mode" load-path))
+(setq load-path (cons "~/github/rainbow-delimiters" load-path))
+(setq load-path (cons "~/github/markdown-mode" load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color configuration
@@ -39,18 +44,18 @@
   ;; GUI color setting
   (if (string= theme "Dark")
       (progn
-        (load (expand-file-name "./.emacs.d/color_dark.el") nil t nil)
+        (load (expand-file-name "~/.emacs.d/color_dark.el") nil t nil)
         )
-    (load (expand-file-name "./.emacs.d/color_light.el") nil t nil)
+    (load (expand-file-name "~/.emacs.d/color_light.el") nil t nil)
     )
 
   ;; 256 terminal color setting
   (progn
     (if (string= theme "Dark")
         (progn
-          (load (expand-file-name "./.emacs.d/color_dark_term256.el") nil t nil)
+          (load (expand-file-name "~/.emacs.d/color_dark_term256.el") nil t nil)
           )
-      (load (expand-file-name "./.emacs.d/color_light_term256.el") nil t nil)
+      (load (expand-file-name "~/.emacs.d/color_light_term256.el") nil t nil)
       )
     )
   )

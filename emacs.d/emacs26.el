@@ -44,9 +44,6 @@
   )
 
 (if window-system
-  ;; Scroll bar setting
-  (set-scroll-bar-mode 'right)
-
   ;; GUI color setting
   (if (string= theme "Dark")
       (progn
@@ -64,6 +61,9 @@
       (load (expand-file-name "~/.emacs.d/color_light_term256.el") nil t nil)
       )
     )
+
+  ;; Scroll bar setting
+  (set-scroll-bar-mode 'right)  
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

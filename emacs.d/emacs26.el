@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/06/12 14:04:51 piste
+;; +DATE: 2020/06/12 15:20:02 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,6 +21,9 @@
 (setq load-path (cons "~/github/company-mode" load-path))
 (setq load-path (cons "~/github/rainbow-delimiters" load-path))
 (setq load-path (cons "~/github/markdown-mode" load-path))
+;; syslog-mode requires a lot of libraries....
+;(setq load-path (cons "~/github/syslog-mode" load-path))
+;(setq load-path (cons "~/github/hide-lines" load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color configuration
@@ -41,6 +44,9 @@
   )
 
 (if window-system
+  ;; Scroll bar setting
+  (set-scroll-bar-mode 'right)
+
   ;; GUI color setting
   (if (string= theme "Dark")
       (progn
@@ -270,10 +276,6 @@
 ;; Window setting
 (setq-default truncate-lines nil)
 (setq-default truncate-partial-width-windows t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Scroll bar setting
-(set-scroll-bar-mode 'right)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Startup setting
@@ -1172,10 +1174,10 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; syslog mode
-(require 'syslog-mode)
-(add-to-list 'auto-mode-alist '("/var/log.*\\'" . syslog-mode))
-(add-to-list 'auto-mode-alist '("\\.catcsv$" . syslog-mode))
-(add-to-list 'auto-mode-alist '("\\ltfs.*log$" . syslog-mode))
+;(require 'syslog-mode)
+;(add-to-list 'auto-mode-alist '("/var/log.*\\'" . syslog-mode))
+;(add-to-list 'auto-mode-alist '("\\.catcsv$" . syslog-mode))
+;(add-to-list 'auto-mode-alist '("\\ltfs.*log$" . syslog-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SCT mode

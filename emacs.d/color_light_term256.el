@@ -57,16 +57,16 @@
 (setq color-bg-powerline-active0 "DarkOliveGreen1")
 (setq color-fg-powerline-active0 color-fg)
 (setq color-bg-powerline-active1 "SpringGreen4")
-(setq color-fg-powerline-active1 color-fg)
+(setq color-fg-powerline-active1 color-bg)
 (setq color-bg-powerline-active2 "LightGoldenrod4")
-(setq color-fg-powerline-active2 color-fg)
+(setq color-fg-powerline-active2 color-bg)
 (setq color-bg-powerline-inactive0 "gray30")
 (setq color-fg-powerline-inactive0 "gray70")
 (setq color-bg-powerline-inactive1 "gray70")
 (setq color-bg-powerline-inactive2 "gray70")
 
 ;; Which function
-(setq color-fg-which "gray10")
+(setq color-fg-which color-fg)
 
 ;; White spaces
 (setq color-fg-trailing color_binrojizome)

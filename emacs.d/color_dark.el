@@ -60,7 +60,7 @@
 (setq color-bg-powerline-inactive2 "gray30")
 
 ;; Which function
-(setq color-fg-which "gray10")
+(setq color-fg-which "Black")
 
 ;; White spaces
 (setq color-fg-trailing color_zouge)

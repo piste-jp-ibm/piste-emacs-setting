@@ -1029,8 +1029,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Syslog
-(require 'syslog-mode)
-(add-to-list 'auto-mode-alist '("/var/log.*\\'" . syslog-mode))
+;(require 'syslog-mode)
+;(add-to-list 'auto-mode-alist '("/var/log.*\\'" . syslog-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Definitions of perltidy

@@ -37,7 +37,7 @@
 ;; Base color (Light)
 (setq foreground-light color_binrojizome)
 (setq background-light color_torinokoiro)
-                                        ;(setq yank-bg-light    color_kurotsurubami)
+;(setq yank-bg-light    color_kurotsurubami)
 
 (setq color-fg foreground-light)
 (setq color-bg background-light)

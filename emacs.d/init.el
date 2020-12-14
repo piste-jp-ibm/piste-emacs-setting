@@ -6,6 +6,9 @@
 
 ;; XEmacs backwards compatibility file
 (cond
+ ((= emacs-major-version 27)
+  (load (expand-file-name "~/.emacs.d/emacs27.el") nil t nil))
+
  ((= emacs-major-version 26)
   (load (expand-file-name "~/.emacs.d/emacs26.el") nil t nil))
 

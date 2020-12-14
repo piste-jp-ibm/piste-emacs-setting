@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/06/13 10:02:56 piste
+;; +DATE: 2020/12/14 22:28:30 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -49,12 +49,12 @@
   ;; GUI color setting
   (if (string= theme "Dark")
       (progn
-        (load (expand-file-name "~/.emacs.d/color_dark.el") nil t nil)
+        (load (expand-file-name "~/.emacs.d/color_dark27.el") nil t nil)
         )
     (load (expand-file-name "~/.emacs.d/color_light.el") nil t nil)
     )
 
-  ;; 256 terminal color setting
+  ; 256 terminal color setting
   (progn
     (if (string= theme "Dark")
         (progn
@@ -286,6 +286,11 @@
 ;; Startup setting
 (setq inhibit-startup-message t)   ; No startup message
 (setq initial-scratch-message nil)
+
+(set-foreground-color color-fg)
+(set-background-color color-bg)
+(set-face-attribute 'region nil :background yank-bg-dark)
+(set-face-foreground 'minibuffer-prompt color-fg)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Misc

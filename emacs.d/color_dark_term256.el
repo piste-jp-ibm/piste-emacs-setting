@@ -38,15 +38,13 @@
 ;; Base color (Dark)
 (setq foreground-dark  color_zouge)
 (setq background-dark  color_binrojizome)
-(setq yank-bg-dark     "color-240")
+(setq yank-bg          "color-240")
 
 (setq color-fg foreground-dark)
 (setq color-bg background-dark)
 
-(set-face-attribute 'default nil :background color-bg) ;; disable transparency
 (set-foreground-color color-fg)
 (set-background-color color-bg)
-(set-face-attribute 'region nil :background yank-bg-dark)
 
 ;; Powerline
 (setq color-bg-powerline-active0 "DarkOliveGreen1")

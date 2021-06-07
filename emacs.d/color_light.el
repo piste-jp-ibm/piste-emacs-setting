@@ -37,15 +37,13 @@
 ;; Base color (Light)
 (setq foreground-light color_binrojizome)
 (setq background-light color_torinokoiro)
-;(setq yank-bg-light    color_kurotsurubami)
+(setq yank-bg          color_kurotsurubami)
 
 (setq color-fg foreground-light)
 (setq color-bg background-light)
 
 (set-foreground-color color-fg)
 (set-background-color color-bg)
-;;(set-face-attribute 'region nil :background yank-bg-light)
-(set-face-foreground 'minibuffer-prompt color-fg)
 
 ;; Powerline
 (setq color-fg-powerline-active0 "Black")

@@ -8,6 +8,7 @@
 ;; Color name definitions
 (setq color_zouge         "#f8f4e6")
 (setq color_binrojizome   "#433d3c")
+(setq color_keshizumi     "#434343")
 (setq color_kurotsurubami "#544a47")
 (setq color_miruiro       "#726d40")
 (setq color_soho          "#ab6953")
@@ -37,15 +38,13 @@
 ;; Base color (Dark)
 (setq foreground-dark  color_zouge)
 (setq background-dark  color_binrojizome)
-(setq yank-bg-dark     color_kurotsurubami)
+(setq yank-bg          color_kurotsurubami)
 
 (setq color-fg foreground-dark)
 (setq color-bg background-dark)
 
 (set-foreground-color color-fg)
 (set-background-color color-bg)
-(set-face-attribute 'region nil :background yank-bg-dark)
-(set-face-foreground 'minibuffer-prompt color-fg)
 
 ;; Powerline
 (setq color-fg-powerline-active0 "Black")

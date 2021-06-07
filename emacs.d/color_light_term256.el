@@ -37,15 +37,13 @@
 ;; Base color (Light)
 (setq foreground-light color_binrojizome)
 (setq background-light color_torinokoiro)
-;;(setq yank-bg-light    color_kurotsurubami)
+(setq yank-bg          color_kurotsurubami)
 
 (setq color-fg foreground-light)
 (setq color-bg background-light)
 
-(set-face-attribute 'default nil :background color-bg) ;; disable transparency
 (set-foreground-color color-fg)
 (set-background-color color-bg)
-;;(set-face-attribute 'region nil :background yank-bg-light)
 
 (setq color-fg foreground-light)
 (setq color-bg background-light)

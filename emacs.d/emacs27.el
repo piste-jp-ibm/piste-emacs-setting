@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/12/14 22:28:30 piste
+;; +DATE: 2021/06/07 10:16:27 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -49,7 +49,7 @@
   ;; GUI color setting
   (if (string= theme "Dark")
       (progn
-        (load (expand-file-name "~/.emacs.d/color_dark27.el") nil t nil)
+        (load (expand-file-name "~/.emacs.d/color_dark.el") nil t nil)
         )
     (load (expand-file-name "~/.emacs.d/color_light.el") nil t nil)
     )
@@ -62,6 +62,7 @@
           )
       (load (expand-file-name "~/.emacs.d/color_light_term256.el") nil t nil)
       )
+    (set-face-attribute 'default nil :background color-bg) ;; disable transparency
     )
   )
 
@@ -289,7 +290,7 @@
 
 (set-foreground-color color-fg)
 (set-background-color color-bg)
-(set-face-attribute 'region nil :background yank-bg-dark)
+(set-face-attribute 'region nil :background yank-bg)
 (set-face-foreground 'minibuffer-prompt color-fg)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -819,6 +820,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
      (require 'ob-dot)
      (require 'ob-gnuplot)
      (require 'ob-latex)
+     (require 'ob-org)
      ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

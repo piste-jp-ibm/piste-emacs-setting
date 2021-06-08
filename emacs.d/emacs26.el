@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2020/06/13 10:02:56 piste
+;; +DATE: 2021/01/21 09:58:16 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -82,13 +82,11 @@
 (require 'generic-x)
 
 ;; When opened from Desktep entry, PATH won't be set to shell's value.
-(if (eq system-type 'darwin)
-    (let ((path-str
-           (replace-regexp-in-string
+(let ((path-str
+       (replace-regexp-in-string
             "\n+$" "" (shell-command-to-string "echo $PATH"))))
       (setenv "PATH" path-str)
       (setq exec-path (nconc (split-string path-str ":") exec-path)))
-  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Global Setting

@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2022/02/18 21:20:27 piste
+;; +DATE: 2022/06/22 16:23:25 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -73,6 +73,10 @@
     (set-face-attribute 'default nil :background color-bg) ;; disable transparency
     )
   )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Load personal secrets
+(load (expand-file-name "~/.emacs.d/secret.el") nil t nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Character code setting
@@ -1231,6 +1235,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;; Path to the grip binary
 (setq grip-binary-path "/usr/local/bin/grip")
+(setq grip-github-api-url "https://api.github.ibm.com")
 
 ;; Hook at mode
 (use-package grip-mode

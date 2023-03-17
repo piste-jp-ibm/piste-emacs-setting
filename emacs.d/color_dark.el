@@ -46,6 +46,10 @@
 (set-foreground-color color-fg)
 (set-background-color color-bg)
 
+;; minibuffer
+(setq color-fg-minibuffer-prompt foreground-dark)
+(setq color-bg-minibuffer-prompt background-dark)
+
 ;; Powerline
 (setq color-fg-powerline-active0 "Black")
 (setq color-bg-powerline-active0 "DarkOliveGreen1")

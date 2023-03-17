@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2021/01/21 09:58:16 piste
+;; +DATE: 2023/03/17 10:27:36 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -97,6 +97,10 @@
 (setq kill-whole-line t)
 (define-key global-map "\C-z" nil)
 (setq-default major-mode 'text-mode)
+
+(set-face-attribute 'minibuffer-prompt nil
+                    :foreground color-fg-minibuffer-prompt
+                    :background color-bg-minibuffer-prompt)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Powerline

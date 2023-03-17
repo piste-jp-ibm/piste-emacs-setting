@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2023/03/17 10:27:36 piste
+;; +DATE: 2023/03/17 10:35:40 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -141,7 +141,8 @@
 (which-function-mode)
 (set-face-attribute 'which-func nil
                     :weight 'bold
-                    :foreground color-fg-which)
+                    :foreground color-fg-which
+                    :background color-bg-which)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; doxymacs

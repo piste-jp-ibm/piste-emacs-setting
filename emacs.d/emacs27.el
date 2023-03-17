@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2022/02/18 21:20:27 piste
+;; +DATE: 2023/03/17 10:37:09 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -109,6 +109,10 @@
 (define-key global-map "\C-z" nil)
 (setq-default major-mode 'text-mode)
 
+(set-face-attribute 'minibuffer-prompt nil
+                    :foreground color-fg-minibuffer-prompt
+                    :background color-bg-minibuffer-prompt)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Powerline
 (require 'powerline)
@@ -148,7 +152,8 @@
 (which-function-mode)
 (set-face-attribute 'which-func nil
                     :weight 'bold
-                    :foreground color-fg-which)
+                    :foreground color-fg-which
+                    :background color-bg-which)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; doxymacs

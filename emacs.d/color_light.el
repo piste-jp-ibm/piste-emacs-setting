@@ -62,7 +62,8 @@
 (setq color-bg-powerline-inactive2 "gray30")
 
 ;; Which function
-(setq color-fg-which "Black")
+(setq color-fg-which color-fg-powerline-active0)
+(setq color-bg-which color-bg-powerline-active0)
 
 ;; White spaces
 (setq color-fg-trailing color_binrojizome)

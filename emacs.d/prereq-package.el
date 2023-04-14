@@ -10,15 +10,23 @@
 ;; Package to install
 (defvar my/favorite-packages
   '(
+    bind-key
     company
     company-c-headers
     company-org-block
-    company-try-hard
+    dash
+    go-mode
+    grip-mode
+    gtags-mode
+    hide-lines
+    hsluv
     markdown-mode
+    ov
     powerline
     rainbow-delimiters
     syslog-mode
-    grip-mode
+    use-package
+    visible-mark
     ))
 
 ;; Install packeged not installed yet

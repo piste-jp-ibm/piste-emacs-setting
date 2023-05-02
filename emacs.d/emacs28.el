@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2023/03/17 10:36:26 piste
+;; +DATE: 2023/05/01 17:56:08 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -213,9 +213,8 @@
              (progn
                (condition-case err
                    ;;(let* ((font-family "DejaVu Sans Mono for Powerline")
-                   (let* ((font-family "DejaVu Sans Mono")
-                          (jp-font-family "IPAGothic")
-                          ;;(jp-font-family "MigMix 1M Regular")
+                   (let* ((font-family "BitstreamVeraSansMono Nerd Font Mono")
+                          (jp-font-family "PlemolJP Console NF")
                           (font-size (calc-point))
                           (font-height (* font-size (calc-point)) )
                           )
@@ -238,8 +237,7 @@
                        (dolist (character characters)
                          (set-fontset-font name character font-spec))
                        (add-to-list 'face-font-rescale-alist
-                                    '("IPAGothic" . 1.2))
-                                      ;;'("MigMix 1M Regular" . 2.0))
+                                    '("PlemolJP Console NF" . 1.2))
                        )
                      (tool-bar-mode -1))
                  (error (message "%s" err))))

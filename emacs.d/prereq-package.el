@@ -27,6 +27,9 @@
     syslog-mode
     use-package
     visible-mark
+    tern
+    js2-mode
+    tern-auto-complete
     ))
 
 ;; Install packeged not installed yet

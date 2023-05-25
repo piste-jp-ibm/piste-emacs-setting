@@ -2,7 +2,7 @@
 ;; Emacs26 Setting File
 ;;                  Written by Atsushi Abe
 ;;
-;; +DATE: 2023/05/01 17:56:08 piste
+;; +DATE: 2023/05/23 14:53:20 piste
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1187,14 +1187,22 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; JavaScript
-(autoload 'javascript-mode "javascript-mode" "JavaScript" t)
-(autoload 'ecmascript-mode "ecmascript-mode" "ECMAScript" t)
-(setq auto-mode-alist
-      (append
-       '(
-         ("\\.js$" . ecmascript-mode)
-         )
-       auto-mode-alist))
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+(add-hook 'js2-mode-hook
+    (lambda ()
+      (tern-mode t)
+      (gtags-mode)
+      (ruler-mode)
+      (set-fill-column 120)
+      (setq comment-column 0)
+      (flyspell-prog-mode)))
+
+(eval-after-load 'tern
+    '(progn
+        (require 'tern-auto-complete)
+        (tern-ac-setup)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Definitions of perltidy

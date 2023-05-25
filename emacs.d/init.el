@@ -8,7 +8,7 @@
 (cond
  ((= emacs-major-version 28)
   (load (expand-file-name "~/.emacs.d/emacs28.el") nil t nil))
- 
+
  ((= emacs-major-version 27)
   (load (expand-file-name "~/.emacs.d/emacs27.el") nil t nil))
 
@@ -28,7 +28,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(company-org-block company-c-headers grip-mode syslog-mode rainbow-delimiters powerline markdown-mode company use-package)))
+   '(tern-auto-complete js2-mode tern company-org-block company-c-headers grip-mode syslog-mode rainbow-delimiters powerline markdown-mode company use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
